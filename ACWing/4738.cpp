@@ -1,6 +1,6 @@
 "单调栈 ：求每个数左边第一个比它小的数"
 
-#include <bit/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 const int N = 4e5 + 10;

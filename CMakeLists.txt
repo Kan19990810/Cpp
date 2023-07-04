@@ -3,4 +3,4 @@ project(CppPractice)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(CppPractice main.cpp ACWing/4714.cpp)
+add_executable(CppPractice main.cpp ACWing/4672.cpp)

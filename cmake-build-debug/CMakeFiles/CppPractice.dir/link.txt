@@ -1,0 +1,3 @@
+D:\Computer\JetBrain\apps\CLion\ch-0\223.8617.54\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\CppPractice.dir/objects.a
+D:\Computer\JetBrain\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\ar.exe qc CMakeFiles\CppPractice.dir/objects.a @CMakeFiles\CppPractice.dir\objects1.rsp
+D:\Computer\JetBrain\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\CppPractice.dir/objects.a -Wl,--no-whole-archive -o CppPractice.exe -Wl,--out-implib,libCppPractice.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CppPractice.dir\linklibs.rsp

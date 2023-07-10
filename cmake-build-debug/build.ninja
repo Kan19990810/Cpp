@@ -73,6 +73,18 @@ build CMakeFiles/CppPractice.dir/ACWing/3752.cpp.obj: CXX_COMPILER__CppPractice_
   OBJECT_DIR = CMakeFiles\CppPractice.dir
   OBJECT_FILE_DIR = CMakeFiles\CppPractice.dir\ACWing
 
+build CMakeFiles/CppPractice.dir/ACWing/4114.cpp.obj: CXX_COMPILER__CppPractice_Debug D$:/File/CppPractice/ACWing/4114.cpp || cmake_object_order_depends_target_CppPractice
+  DEP_FILE = CMakeFiles\CppPractice.dir\ACWing\4114.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\CppPractice.dir
+  OBJECT_FILE_DIR = CMakeFiles\CppPractice.dir\ACWing
+
+build CMakeFiles/CppPractice.dir/ACWing/3326.cpp.obj: CXX_COMPILER__CppPractice_Debug D$:/File/CppPractice/ACWing/3326.cpp || cmake_object_order_depends_target_CppPractice
+  DEP_FILE = CMakeFiles\CppPractice.dir\ACWing\3326.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\CppPractice.dir
+  OBJECT_FILE_DIR = CMakeFiles\CppPractice.dir\ACWing
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CppPractice
@@ -81,7 +93,7 @@ build CMakeFiles/CppPractice.dir/ACWing/3752.cpp.obj: CXX_COMPILER__CppPractice_
 #############################################
 # Link the executable CppPractice.exe
 
-build CppPractice.exe: CXX_EXECUTABLE_LINKER__CppPractice_Debug CMakeFiles/CppPractice.dir/main.cpp.obj CMakeFiles/CppPractice.dir/ACWing/4672.cpp.obj CMakeFiles/CppPractice.dir/ACWing/4443.cpp.obj CMakeFiles/CppPractice.dir/ACWing/3752.cpp.obj
+build CppPractice.exe: CXX_EXECUTABLE_LINKER__CppPractice_Debug CMakeFiles/CppPractice.dir/main.cpp.obj CMakeFiles/CppPractice.dir/ACWing/4672.cpp.obj CMakeFiles/CppPractice.dir/ACWing/4443.cpp.obj CMakeFiles/CppPractice.dir/ACWing/3752.cpp.obj CMakeFiles/CppPractice.dir/ACWing/4114.cpp.obj CMakeFiles/CppPractice.dir/ACWing/3326.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CppPractice.dir

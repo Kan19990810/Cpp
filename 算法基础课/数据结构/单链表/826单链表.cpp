@@ -36,6 +36,7 @@ void delet(int k)
 
 void insert(int k, int x)
 {
+    // 
     n[idx] = x;
     ne[idx] = ne[k];
     ne[k] = idx;

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CppPractice"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/File/CppPractice/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CppPractice">
+				<Option output="D:/File/CppPractice/cmake-build-debug/CppPractice.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/File/CppPractice/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 CppPractice"/>
+					<CompileFile command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CppPractice/fast">
+				<Option output="D:/File/CppPractice/cmake-build-debug/CppPractice.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/File/CppPractice/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 CppPractice/fast"/>
+					<CompileFile command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/File/CppPractice/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/File/CppPractice/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Computer/JetBrain/apps/CLion/ch-0/223.8617.54/bin/mingw/bin/mingw32-make.exe -f &quot;D:/File/CppPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/File/CppPractice/ACWing/3752.cpp">
+			<Option target="CppPractice"/>
+		</Unit>
+		<Unit filename="D:/File/CppPractice/ACWing/4443.cpp">
+			<Option target="CppPractice"/>
+		</Unit>
+		<Unit filename="D:/File/CppPractice/ACWing/4672.cpp">
+			<Option target="CppPractice"/>
+		</Unit>
+		<Unit filename="D:/File/CppPractice/main.cpp">
+			<Option target="CppPractice"/>
+		</Unit>
+		<Unit filename="D:/File/CppPractice/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

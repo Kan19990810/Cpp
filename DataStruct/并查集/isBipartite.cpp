@@ -38,7 +38,7 @@ public:
         }
         else
         {
-            return (rank[x] - rank[y]) % 2 == 1;
+            return abs(rank[x] - rank[y]) % 2 == 1;
         }
         return true;
     }
@@ -47,7 +47,9 @@ public:
     {
         if (parent[x] != x)
         {
-            parent[x] = find(parent[x]);
+            int t = find(parent[x]);
+            rank[x] += rank[parent[x]];
+            parent[x] = t;
         }
         return parent[x];
     }

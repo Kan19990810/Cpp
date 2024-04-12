@@ -7,7 +7,7 @@ public:
     int prefixSum(int x)
     {
         int s = 0;
-        for (; x > 0; x &= x - 1)
+        for (; x > 0; x -= (x & -x))
         {
             s += tree[x];
         }

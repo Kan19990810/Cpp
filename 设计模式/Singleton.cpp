@@ -26,10 +26,12 @@ public:
     }
 
 private:
+    // 私有的构造函数
     ShoppingCartManager()
     {
     }
 
+    // 私有的数据
     map<string, int> cart;
 };
 
@@ -47,3 +49,19 @@ int main()
     cart.viewCart();
     return 0;
 }
+
+/**
+ *
+ *
+ * class single{
+ * public:
+ *      static single &getinstance(){
+ *          static single instance;
+ *          return instance;
+ * }
+ *
+ * private:
+ *      single(){}
+ *
+ * }
+ */

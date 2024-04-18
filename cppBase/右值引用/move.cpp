@@ -68,10 +68,54 @@ int main()
     //               << "\", \"" << v[1] << "\"\n";
     // }
 
+    // {
+    //     Good g;
+    //     Bad b;
+    //     Good g2 = std::move_if_noexcept(g);
+    //     Bad b2 = std::move_if_noexcept(b);
+    // }
+
+    struct t
     {
-        Good g;
-        Bad b;
-        Good g2 = std::move_if_noexcept(g);
-        Bad b2 = std::move_if_noexcept(b);
+        int x1;
+        t()
+        {
+            std::cout << &x1 << std::endl;
+            std::cout << "construct\n";
+        }
+
+        t(const int &x) : x1(x)
+        {
+            std::cout << &x1 << std::endl;
+            std::cout << "lvalue construct\n";
+        }
+        t(int &&x) : x1(x)
+        {
+            std::cout << &x1 << std::endl;
+            std::cout << "rvalue construct\n";
+        }
+        t(const t &x) noexcept : x1(x.x1)
+        {
+            std::cout << &x1 << std::endl;
+            std::cout << "lvalue construct\n";
+        }
+        t(t &&x) noexcept : x1(x.x1)
+        {
+            std::cout << &x1 << std::endl;
+            std::cout << "rvalue construct\n";
+        }
+
+        ~t()
+        {
+            std::cout << "deconstruct\n";
+        }
+    };
+
+    {
+        t t0;
+
+        t t1(t0);
+
+        t t2(std::move(t0));
     }
 }

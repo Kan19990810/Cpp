@@ -3,51 +3,51 @@ using namespace std;
 
 class Solution
 {
+private:
+    bool is_cover(int cnt_s[], int cnt_t[])
+    {
+        for (int i = 'A'; i <= 'Z'; ++i)
+        {
+            if (cnt_s[i] < cnt_t[i])
+            {
+                return false;
+            }
+        }
+
+        for (int i = 'a'; i <= 'z'; ++i)
+        {
+            if (cnt_s[i] < cnt_t[i])
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 public:
     string minWindow(string s, string t)
     {
         int n = s.size();
-        unordered_map<char, int> chrNum;
-        unordered_set<char> speChr;
-
-        for (auto ch : t)
+        int ansL = -1, ansR = n, left = 0;
+        int cnt_s[128]{}, cnt_t[128]{};
+        for (auto &c : t)
         {
-            chrNum[ch]--;
-            speChr.insert(ch);
+            cnt_t[c]++;
         }
-
-        int target = speChr.size();
-        int i = 0, j = 0;
-        int index = 0, ans = n;
-        for (; j < n; ++j)
+        for (int right = 0; right < n; right++)
         {
-            if (speChr.count(s[j]))
+            cnt_s[s[right]]++;
+            while (is_cover(cnt_s, cnt_t))
             {
-                chrNum[s[j]]++;
-                if (chrNum[s[j]] == 0)
+                if (right - left < ansR - ansL)
                 {
-                    target--;
+                    ansL = left;
+                    ansR = right;
                 }
-
-                while (target == 0)
-                {
-                    if (ans > j - i + 1)
-                    {
-                        ans = j - i + 1;
-                        index = i;
-                    }
-                    if (speChr.count(s[i]))
-                    {
-                        chrNum[s[i]]--;
-                        if (chrNum[s[i]] == -1)
-                        {
-                            target++;
-                        }
-                    }
-                    i++;
-                }
+                cnt_s[s[left++]]--;
             }
         }
-        return s.substr(index, ans);
+        return ansL < 0 ? "" : s.substr(ansL, ansR - ansL + 1);
     }
 };

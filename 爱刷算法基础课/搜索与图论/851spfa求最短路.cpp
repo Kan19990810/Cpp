@@ -2,28 +2,24 @@
 #include <vector>
 #include <queue>
 #include <climits>
-
 using namespace std;
 
-int dijkstra(vector<vector<pair<int, int>>> &g)
+int spfa(vector<vector<pair<int, int>>> &g)
 {
     int n = g.size();
     vector<bool> pass(n, false);
     vector<int> dis(n, INT_MAX);
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    queue<int> q;
+    q.push(1);
     dis[1] = 0;
-    pq.push({0, 1});
-    while (!pq.empty())
+    pass[1] = true;
+
+    while (!q.empty())
     {
-        auto tmp = pq.top();
-        pq.pop();
-        int d = tmp.first;
-        int idx = tmp.second;
-        if (pass[idx])
-        {
-            continue;
-        }
-        pass[idx] = true;
+        int idx = q.front();
+        q.pop();
+        pass[idx] = false;
+
         for (auto child : g[idx])
         {
             int chd = child.first;
@@ -31,12 +27,16 @@ int dijkstra(vector<vector<pair<int, int>>> &g)
             if (dis[chi] > chd + dis[idx])
             {
                 dis[chi] = chd + dis[idx];
-                pq.push({dis[chi], chi});
+                if (pass[chi])
+                {
+                    continue;
+                }
+                q.push(chi);
+                pass[chi] = true;
             }
         }
     }
-    if (dis[n - 1] == INT_MAX)
-        return -1;
+
     return dis[n - 1];
 }
 
@@ -51,8 +51,8 @@ int main()
         cin >> x >> y >> z;
         g[x].push_back({z, y});
     }
-    int t = dijkstra(g);
-    if (t == -1)
+    int t = spfa(g);
+    if (t == INT_MAX)
         cout << "impossible" << endl;
     else
         cout << t << endl;

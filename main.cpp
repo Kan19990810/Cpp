@@ -1,30 +1,56 @@
-#include <bits/stdc++.h>
-#include <thread>
+#include <mutex>
+#include <condition_variable>
+
 using namespace std;
 
-int *ptr;
-
-void func1()
+class RWlock
 {
-    cout << "func1 pre ptr:" << ptr << endl;
-    int b = 2;
-    ptr = &b;
-    cout << "func1 cur ptr:" << ptr << endl;
-}
+private:
+    mutex mtx;
+    condition_variable rcond;
+    condition_variable wcond;
+    int readwaiting;
+    int reading;
+    int writewaiting;
+    int writing;
 
-void func2()
-{
-    cout << "func2 pre ptr:" << *ptr << endl;
-    *ptr = 3;
-    cout << "func2 cur ptr:" << *ptr << endl;
-}
+public:
+    RWlock() : readwaiting(0), writewaiting(0), reading(0), writing(0) {}
 
-int main()
-{
-    int a = 1;
-    ptr = &a;
-    thread t1(func1);
-    thread t2(func2);
-    t1.join();
-    t2.join();
-}
+    void RLock()
+    {
+        unique_lock<mutex> locker(mtx);
+        readwaiting++;
+        rcond.wait(locker, [&]()
+                   { return writing == 0; });
+        readwaiting--;
+        reading++;
+    }
+
+    void RUnlock()
+    {
+        unique_lock<mutex> locker(mtx);
+        reading--;
+        if (reading == 0)
+        {
+            wcond.notify_all();
+        }
+    }
+
+    void WLock()
+    {
+        unique_lock<mutex> locker(mtx);
+        writewaiting++;
+        wcond.wait(locker, [&]()
+                   { return reading == 0 && readwaiting == 0 && writing == 0; });
+        writewaiting--;
+        writing++;
+    }
+
+    void WUnlock()
+    {
+        unique_lock<mutex> locker(mtx);
+        writing--;
+        rcond.notify_one();
+    }
+};

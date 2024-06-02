@@ -1,4 +1,5 @@
 #include <unordered_map>
+#include <iostream>
 using namespace std;
 
 struct LRUNode
@@ -103,3 +104,15 @@ private:
  * int param_1 = obj->get(key);
  * obj->put(key,value);
  */
+int main()
+{
+    LRUCache lru(3);
+    lru.put(1, 1);
+    // lru.update(2, 2);
+    // lru.update(3, 3);
+    // cout << lru.query(3) << endl;
+    // lru.update(4, 4);
+
+    cout << lru.get(1) << endl;
+    return 0;
+}

@@ -1,38 +1,54 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
 
-void kmp(string a, string b)
+struct good
 {
-    int n = a.size();
-    int m = b.size();
-    vector<int> ne(n + 1);
-
-    for (int i = 2, j = 0; i <= n; ++i)
-    {
-        while (j && a[i - 1] != a[j])
-            j = ne[j];
-        if (a[i - 1] == a[j])
-            j++;
-        ne[i] = j;
-    }
-
-    for (int i = 1, j = 0; i <= m; ++i)
-    {
-        while (j && b[i - 1] != a[j])
-            j = ne[j];
-        if (b[i - 1] == a[j])
-            j++;
-        if (j == n)
-        {
-            cout << i - n << ' ';
-        }
-    }
-}
+    int a;
+    int b;
+    int c;
+    good(int a1, int b1, int c1) : a(a1), b(b1), c(c1) {}
+};
 
 int main()
 {
-    string s1 = "aba";
-    string s2 = "ababa";
-    kmp(s1, s2);
+    int n, k;
+    cin >> n >> k;
+    vector<good> arr;
+    for (int i = 0; i < n; ++i)
+    {
+        int x, y;
+        cin >> x >> y;
+        arr.push_back({x + 2 * y, y, i});
+    }
+    auto cmp = [&](good &t1, good &t2)
+    {
+        if (t1.a > t2.a)
+            return true;
+        else if (t1.a < t2.a)
+            return false;
+        else
+        {
+            if (t1.b > t2.b)
+                return true;
+            else if (t1.b < t2.b)
+                return false;
+            else
+                t1.c < t2.c;
+        }
+    };
+    sort(arr.begin(), arr.end(), cmp);
+
+    vector<int> ans;
+    for (int i = 0; i < k; ++i)
+    {
+        ans.push_back(arr[i].c + 1);
+    }
+    sort(ans.begin(), ans.end());
+    for (auto num : ans)
+        cout << num << ' ';
+
     return 0;
 }
